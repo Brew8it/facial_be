@@ -21,13 +21,13 @@ class FacialRec:
         known_face_names, known_face_encodings = self.load_encodings()
         pepole_entered = {}
         max_faces = 0
-        batch_of_face_locations = []
+        #batch_of_face_locations = []
         print("Doing batch work")
         millis = int(round(time.time() * 1000))
-        for image in images_list:
-            batch_of_face_locations.append(face_recognition.face_locations(image, number_of_times_to_upsample=1, model='cnn'))
+        #for image in images_list:
+        #    batch_of_face_locations.append(face_recognition.face_locations(image, number_of_times_to_upsample=1, model='cnn'))
 
-        #batch_of_face_locations = face_recognition.batch_face_locations(images_list, number_of_times_to_upsample=1, batch_size=30)
+        batch_of_face_locations = face_recognition.batch_face_locations(images_list, number_of_times_to_upsample=1, batch_size=7)
         millis1 = int(round(time.time() * 1000))
         print("Batchwork took: " + str(millis1-millis))
         millis_all = int(round(time.time() * 1000))
