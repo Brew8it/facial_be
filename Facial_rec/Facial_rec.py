@@ -23,7 +23,7 @@ class FacialRec:
         max_faces = 0
         print("Doing batch work")
         millis = int(round(time.time() * 1000))
-        batch_of_face_locations = face_recognition.batch_face_locations(images_list, number_of_times_to_upsample=0, batch_size=80)
+        batch_of_face_locations = face_recognition.batch_face_locations(images_list, number_of_times_to_upsample=0)
         millis1 = int(round(time.time() * 1000))
         print("Batchwork took: " + str(millis1-millis))
         millis_all = int(round(time.time() * 1000))
