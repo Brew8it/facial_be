@@ -28,7 +28,7 @@ while video_capture.isOpened():
     frames.append(frame)
 
     # Every 128 frames (the default batch size), batch process the list of frames to find faces
-    if len(frames) == 128:
+    if len(frames) == 50:
         millis = int(round(time.time() * 1000))
         FacialRec().facial_rec(frames)
         millis1 = int(round(time.time() * 1000))
