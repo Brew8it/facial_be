@@ -11,6 +11,6 @@ for root, dir, files in os.walk(path):
             images.append(face_recognition.load_image_file(path + "/" + file))
         print("Starting facelocation for" + str(file))
         for image in images:
-            face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
+            face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=1, model="cnn")
 
 
